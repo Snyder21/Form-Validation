@@ -1,0 +1,145 @@
+ * {
+   box-sizing: border-box;
+ }
+
+ :root {
+   --primary-color: #564d4a;
+   --primary-dark-color: #Fd6D2A;
+   --success-color: green;
+   --error-color: red;
+   --checkmark-color: rgb(90, 203, 90);
+   --white-color: #fff;
+ }
+
+ body {
+   background: url("./images/bg.jpg") no-repeat center right;
+   background-size: cover;
+   font-family: "Poppins", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 80vh;
+   margin: 0;
+   padding: 30px;
+ }
+
+ .container {
+   background-image: linear-gradient(to left, var(--primary-color) 5%, transparent 60%);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+   border-radius: 15px;
+   border: 1px solid black;
+   max-width: 600px;
+   padding: 30px;
+ }
+
+ h1 {
+   font-size: 35px;
+   font-weight: 900;
+   color: #222;
+   margin: 0 0 30px;
+ }
+
+ .form {
+   padding: 0;
+ }
+
+ .form-group {
+   position: relative;
+   margin-bottom: 15px;
+ }
+
+ .form-control label {
+   color: black;
+   display: block;
+   font-size: 24px;
+   font-weight: 900;
+   margin-bottom: 5px;
+ }
+ .form-group{
+ 
+   max-width: 70%;
+ }
+
+ .form-control input {
+   font-family: "Poppins", sans-serif;
+   border: 1px solid #e6e6e6;
+   border-radius: 4px;
+   display: block;
+   max-width:100%;
+   padding: 10px;
+   font-size: 14px;
+ }
+
+ .form-control:after {
+   content: "\2713";
+   font-size: 1.5rem;
+   opacity: 0;
+   color: var(--checkmark-color);
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%);
+   transition: all ease 0.5s;
+ }
+
+ .form-control input:focus {
+   outline: none;
+   border-color: #777;
+ }
+
+ .form-control.success input {
+   border-color: var(--success-color);
+ }
+
+ .form-control.error input {
+   border-color: var(--error-color);
+ }
+
+ .form-control.success:after {
+   opacity: 1;
+   transform: translateY(-50%);
+ }
+
+ .form-control small {
+   color: var(--error-color);
+   position: absolute;
+   bottom: -20px;
+   left: 0;
+   visibility: hidden;
+ }
+
+ .form-control.error small {
+   visibility: visible;
+ }
+
+ button {
+   cursor: pointer;
+   background: var(--primary-color);
+   border-radius: 5px;
+   color: var(--white-color);
+   display: inline-block;
+   font-size: 18px;
+   padding: 20px 39px;
+   margin: 20px 20px;
+   transition: all ease 0.30s;
+ }
+
+ button:hover {
+   border-radius: 1px;
+   background: var(--primary-dark-color);
+   outline: 2px solid var(--primary-dark-color);
+   outline-offset: 3px;
+ }
+ .has-error input {
+   border-color: var(--error-color);
+ }
+
+ .has-success input {
+   border-color: var(--success-color);
+ }
+
+ .form-group small {
+   color: var(--error-color);
+   visibility: hidden;
+   /* Initially hide error messages */
+ }
